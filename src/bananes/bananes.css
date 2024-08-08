@@ -1,0 +1,35 @@
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(yellow, orange, pink);
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  border-radius: 10px;
+  color: #333;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(yellow, orange, pink);
+  justify-content: center;
+  align-items: center;
+}
+
+.text-style {
+  margin-top: 2rem;
+  border-radius: 5px;
+  border: 5px solid #333;
+  background: linear-gradient(yellow, orange, pink);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #333;
+}
+
+p {
+  padding: 2rem;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jus Plus</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/25ac037d23.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script type="module" src="index.js"></script>
+    <header>
+      <h3 class="menu">JusPlus</h3>
+      <a
+        href="https://facebook.com/profile.php?id=61563845939290"
+        class="i-face"
+      >
+        <i class="fa-brands fa-facebook"> Page Facebook</i>
+      </a>
+    </header>
+    <h1 class="juice-sp-title">
+      Nos jus <span class="special-c">sont excellents</span> :
+    </h1>
+    <section>
+      <div class="juice">
+        <h1 class="title-smooth">Jus de fraises :</h1>
+        <img src="./assets/images/juice-1.jpeg" alt="fraise" />
+        <h1 class="title-harder">Prix : 6.500 DT</h1>
+        <a href="fraises/fraises.html">En savoir plus</a>
+      </div>
+      <div class="juice">
+        <h1 class="title-smooth">Jus de citrons :</h1>
+        <img
+          class="juice-harder"
+          src="./assets/images/juice-3.jpeg"
+          alt="citrons"
+        />
+        <h1 class="title-harder">Prix : 3.500 DT</h1>
+        <a href="citrons/citrons.html">En savoir plus</a>
+      </div>
+      <div class="juice">
+        <h1 class="title-smooth">Jus de kiwi :</h1>
+        <img src="./assets/images/juice-2.jpeg" alt="kiwis" />
+        <h1 class="title-harder">Prix : 10.000 DT</h1>
+        <a href="kiwi/kiwi.html">En savoir plus</a>
+      </div>
+      <div class="juice-hard-bc">
+        <h1 class="title-smooth">Jus de bananes :</h1>
+        <img
+          class="img-harder-bc"
+          src="./assets/images/juice-4.jpeg"
+          alt="kiwis"
+        />
+        <h1 class="title-harder">Prix : 10.000 DT</h1>
+        <a href="bananes/bananes.html">En savoir plus</a>
+      </div>
+      <div class="juice-hard-bc">
+        <h1 class="title-smooth">Jus de mangues :</h1>
+        <img
+          class="img-harder-bc"
+          src="./assets/images/mangue.jpeg"
+          alt="kiwis"
+        />
+        <h1 class="title-harder">Prix : 10.000 DT</h1>
+        <a href="mangues/mangues.html">En savoir plus</a>
+      </div>
+    </section>
+
+    <aside>
+      <h1 class="contact-title">Contactez-nous :</h1>
+      <p>Numéro de téléphone : 26 672 843</p>
+      <p>Adresse : Ariana</p>
+      <div class="bar"></div>
+    </aside>
+    <section id="maSection">
+      <div id="conteneurTemplates"></div>
+
+      <div id="monElementWix">
+        <p></p>
+      </div>
+
+      <div id="modal" class="modal hidden">
+        <span class="close">&times;</span>
+        <p>Votre contenu ici, aussi grand que vous voulez !</p>
+      </div>
+      <div id="overlay" class="hidden"></div>
+
+      <form id="myForm">
+        <label id="label-sib" for="name">Nom:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label id="label-sib" for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label id="label-sib" for="phone">Numéro de téléphone:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <button id="send" type="submit">Envoyer</button>
+      </form>
+
+      <!-- <button id="monBouton">Ouvrir la modale</button> -->
+    </section>
+
+    <script>
+      // ... (le reste de votre code JavaScript)
+    </script>
+  </body>
+</html>
