@@ -1,7 +1,6 @@
 {
   "name": "site-web-de-ouai-l",
   "version": "1.0.0",
-  "description": "",
   "type": "module",
   "scripts": {
     "start": "vite",
@@ -10,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "amynn26",
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.77.8",
@@ -20,5 +19,15 @@
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "mongodb": "^6.8.0"
-  }
+  },
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amynn26/jusplus-netlify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amynn26/jusplus-netlify/issues"
+  },
+  "homepage": "https://github.com/amynn26/jusplus-netlify#readme",
+  "description": ""
 }
