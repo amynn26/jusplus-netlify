@@ -125,7 +125,7 @@ async function handleFormSubmit(event) {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const response = await fetch("https://restapi.fr/api/users", {
+    const response = await fetch("http://restapi.fr/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -148,6 +148,47 @@ async function handleFormSubmit(event) {
 
 form.addEventListener("submit", handleFormSubmit);
 
+// server.js
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Connect to MongoDB
+mongoose.connect("mongodb://localhost:27017/users", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+// Define a schema and model
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  message: String,
+});
+
+const User = mongoose.model("User", userSchema);
+
+// Middleware
+app.use(bodyParser.json());
+
+// Handle POST requests
+app.post("/api/users", async (req, res) => {
+  try {
+    const user = new User(req.body);
+    await user.save();
+    res.status(201).json(user);
+  } catch (error) {
+    res.status(500).json({ error: "An error occurred" });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
+
 // Fonction de validation d'email (exemple simple)
 function isValidEmail(email) {
   // Regex plus complexe pour une validation plus rigoureuse
@@ -160,56 +201,56 @@ function isValidEmail(email) {
 
 //debugger;
 
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongodb = require("mongodb");
+// const express = require("express");
+// const bodyParser = require("body-parser");
+// const mongodb = require("mongodb");
 
-const app = express();
-const port = 5173; // Remplacez par le port de votre choix
+// const app = express();
+// const port = 5173; // Remplacez par le port de votre choix
 
-// Middleware pour analyser le corps des requêtes
-app.use(bodyParser.json());
+// // Middleware pour analyser le corps des requêtes
+// app.use(bodyParser.json());
 
-// Route pour gérer les inscriptions
-app.post("/users", (req, res) => {
-  // Récupérer les données envoyées par le formulaire
-  const { name, email, phone } = req.body;
+// // Route pour gérer les inscriptions
+// app.post("/users", (req, res) => {
+//   // Récupérer les données envoyées par le formulaire
+//   const { name, email, phone } = req.body;
 
-  // Validation des données (à améliorer)
-  if (!isValidEmail(email)) {
-    return res.status(400).json({ error: "Adresse email invalide" });
-  }
+//   // Validation des données (à améliorer)
+//   if (!isValidEmail(email)) {
+//     return res.status(400).json({ error: "Adresse email invalide" });
+//   }
 
-  // Enregistrement des données dans la base de données
-  // (Exemple avec une base de données MongoDB)
-  const MongoClient = require(mongodb).MongoClient;
-  const uri = "mongodb://localhost:27017/mydatabase";
-  const client = new MongoClient(uri);
+//   // Enregistrement des données dans la base de données
+//   // (Exemple avec une base de données MongoDB)
+//   const MongoClient = require(mongodb).MongoClient;
+//   const uri = "mongodb://localhost:27017/mydatabase";
+//   const client = new MongoClient(uri);
 
-  client
-    .connect()
-    .then(() => {
-      const db = client.db("mydatabase");
-      const collection = db.collection("users");
-      collection
-        .insertOne({ name, email, phone })
-        .then(() => {
-          console.log("Utilisateur enregistré avec succès");
-          res.json({ message: "Inscription réussie" });
-        })
-        .catch((err) => {
-          console.error(err);
-          res.status(500).json({ error: "Erreur" });
-        });
-    })
-    .catch((err) => {
-      console.error(err);
-      res
-        .status(500)
-        .json({ error: "Erreur de connexion à la base de données" });
-    });
-});
+//   client
+//     .connect()
+//     .then(() => {
+//       const db = client.db("mydatabase");
+//       const collection = db.collection("users");
+//       collection
+//         .insertOne({ name, email, phone })
+//         .then(() => {
+//           console.log("Utilisateur enregistré avec succès");
+//           res.json({ message: "Inscription réussie" });
+//         })
+//         .catch((err) => {
+//           console.error(err);
+//           res.status(500).json({ error: "Erreur" });
+//         });
+//     })
+//     .catch((err) => {
+//       console.error(err);
+//       res
+//         .status(500)
+//         .json({ error: "Erreur de connexion à la base de données" });
+//     });
+// });
 
-app.listen(port, () => {
-  console.log(`Serveur en écoute sur le port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Serveur en écoute sur le port ${port}`);
+// });
