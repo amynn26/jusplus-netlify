@@ -125,7 +125,7 @@ async function handleFormSubmit(event) {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const response = await fetch("http://restapi.fr/api/users", {
+    const response = await fetch("https://restapi.fr/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
