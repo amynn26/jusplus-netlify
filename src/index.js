@@ -35,15 +35,15 @@ function afficherModal() {
   modal.appendChild(imageContainer);
 
   const images = [
-    "assets/images/mariage.jpg",
-    "assets/images/réunions.jpg",
-    "assets/images/anniversaire.jpg",
+    new URL("../assets/images/mariage.jpg", import.meta.url).href,
+    new URL("../assets/images/reunions.jpg", import.meta.url).href,
+    new URL("../assets/images/anniversaire.jpg", import.meta.url).href,
   ];
 
   images.forEach((src) => {
     const image = document.createElement("img");
     image.src = src;
-    image.alt = "Une image de jus de fruits délicieux";
+    image.alt = "";
     imageContainer.appendChild(image);
   });
 
