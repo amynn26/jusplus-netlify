@@ -37,7 +37,7 @@ function afficherModal() {
   const images = [
     "assets/images/mariage.jpg",
     "assets/images/reunions.jpg",
-    "assegs/images/anniversaire.jpg",
+    "assets/images/anniversaire.jpg",
   ];
 
   images.forEach((src) => {
@@ -116,12 +116,10 @@ closeButton.addEventListener("click", () => {
   overlay.classList.add("hidden");
 });
 
-const form = document.querySelector("form");
-
-async function handleFormSubmit(event) {
+document.getElementById("myForm").addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const formData = new FormData(form);
+  const formData = new FormData(event.target);
   const data = Object.fromEntries(formData.entries());
 
   try {
@@ -139,55 +137,42 @@ async function handleFormSubmit(event) {
 
     const responseData = await response.json();
     console.log("Success:", responseData);
-    // Display success message to the user
   } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);
-    // Display error message to the user
   }
-}
+});
 
-form.addEventListener("submit", handleFormSubmit);
+// const form = document.querySelector("form");
+
+// async function handleFormSubmit(event) {
+//   event.preventDefault();
+
+//   const formData = new FormData(form);
+//   const data = Object.fromEntries(formData.entries());
+
+//   try {
+//     const response = await fetch("http://localhost:3000/api/users", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(data),
+//     });
+
+//     if (!response.ok) {
+//       throw new Error("Network response was not ok");
+//     }
+
+//     const responseData = await response.json();
+//     console.log("Success:", responseData);
+//   } catch (error) {
+//     console.error("There has been a problem with your fetch operation:", error);
+//   }
+// }
+
+// form.addEventListener("submit", handleFormSubmit);
 
 // server.js
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-
-const app = express();
-const port = process.env.PORT || 3000;
-
-// Connect to MongoDB
-mongoose.connect("mongodb://localhost:27017/users", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-// Define a schema and model
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  message: String,
-});
-
-const User = mongoose.model("User", userSchema);
-
-// Middleware
-app.use(bodyParser.json());
-
-// Handle POST requests
-app.post("/api/users", async (req, res) => {
-  try {
-    const user = new User(req.body);
-    await user.save();
-    res.status(201).json(user);
-  } catch (error) {
-    res.status(500).json({ error: "An error occurred" });
-  }
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
 
 // Fonction de validation d'email (exemple simple)
 function isValidEmail(email) {
