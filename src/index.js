@@ -1,5 +1,6 @@
 import "./style.css";
 import "./style.mobile.css";
+import "./topbar.js";
 
 // const promesse = fetch("");
 

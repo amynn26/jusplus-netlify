@@ -2,7 +2,7 @@
 body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
-  background: lightgoldenrodyellow;
+  background: #f3f3faa4;
   margin: 0;
 }
 
@@ -29,7 +29,7 @@ body {
 }
 
 header {
-  background: #333;
+  background: #27ae60;
   border: 1px solid green;
   border-radius: 10px;
   padding: 4rem;
@@ -44,7 +44,7 @@ section {
   border-radius: 10px;
   margin-top: 1rem;
   padding: 5.5rem;
-  background: #333;
+  background: #27ae60;
   display: flex;
   gap: 1rem;
   flex-flow: row;
@@ -87,7 +87,7 @@ aside {
   color: white;
   border-radius: 10px;
   margin-top: 9rem;
-  background: #333;
+  background: #27ae60;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -154,7 +154,7 @@ button:hover {
   margin-top: 0;
   color: white;
   border-radius: 10px;
-  background: #333;
+  background: #27ae60;
   display: grid;
   grid-template-columns: 300px 300px 300px 300px 300px;
   grid-template-rows: 75px 75px 75px 75px 75px;
@@ -435,4 +435,32 @@ body.mobile-view {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.header-menu-icon {
+  display: none;
+  font-size: 3rem;
+  color: white;
+}
+.mobile-menu {
+  display: none;
+  position: absolute;
+  box-shadow: var(--box-shadow);
+  top: 9.5rem;
+  right: 1rem;
+  padding: 3rem 1.5rem;
+  width: 20rem;
+  background: white;
+  ul {
+    display: block;
+    li {
+      margin: 2rem 0;
+      a {
+        color: var(--text);
+      }
+    }
+  }
+}
+.mobile-menu.open {
+  display: block;
 }
