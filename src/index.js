@@ -1,4 +1,5 @@
 import "./style.css";
+import "./style.mobile.css";
 
 // const promesse = fetch("");
 
@@ -141,6 +142,16 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
     console.error("There has been a problem with your fetch operation:", error);
   }
 });
+
+document
+  .getElementById("toggleResponsive")
+  .addEventListener("click", function () {
+    document.body.classList.toggle("mobile-view");
+    const isMobile = document.body.classList.contains("mobile-view");
+    this.textContent = isMobile
+      ? "Désactiver Vue Mobile"
+      : "Activer Vue Mobile";
+  });
 
 // const form = document.querySelector("form");
 

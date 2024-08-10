@@ -1,0 +1,423 @@
+/* Styles pour les petits appareils (mobiles) */
+
+@media (max-width: 844px) {
+  header {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  #myForm {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .menu {
+    font-size: 2rem;
+  }
+
+  .i-face {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .juice-sp-title {
+    font-size: 1.2rem;
+  }
+
+  .juice {
+    width: 341px;
+    padding: 1rem;
+  }
+
+  .juice-harder {
+    width: 300px;
+    height: 150px;
+  }
+
+  aside {
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .modal {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  #maSection {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 2rem;
+  }
+
+  .bar {
+    width: 100%;
+  }
+
+  .image-container {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .juice-harder-bc {
+    width: 310px;
+    padding: 1rem;
+  }
+
+  .img-harder-bc {
+    height: 180px;
+    width: 180px;
+  }
+
+  #send {
+    width: 100%;
+  }
+
+  input {
+    min-width: 320px;
+  }
+}
+
+@media (max-width: 896px) {
+  header {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  #myForm {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .menu {
+    font-size: 2rem;
+  }
+
+  .i-face {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .juice-sp-title {
+    font-size: 1.2rem;
+  }
+
+  .juice {
+    width: 345px;
+    padding: 1rem;
+  }
+
+  .juice-harder {
+    width: 300px;
+    height: 150px;
+  }
+
+  aside {
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .modal {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  #maSection {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 2rem;
+  }
+
+  .bar {
+    width: 100%;
+  }
+
+  .image-container {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .juice-harder-bc {
+    width: 310px;
+    padding: 1rem;
+  }
+
+  .img-harder-bc {
+    height: 180px;
+    width: 180px;
+  }
+
+  #send {
+    width: 100%;
+  }
+
+  input {
+    min-width: 350px;
+  }
+}
+
+@media (max-width: 932px) {
+  header {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  #myForm {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .menu {
+    font-size: 2rem;
+  }
+
+  .i-face {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .juice-sp-title {
+    font-size: 1.2rem;
+  }
+
+  .juice {
+    width: 345px;
+    padding: 1rem;
+  }
+
+  .juice-harder {
+    width: 300px;
+    height: 150px;
+  }
+
+  aside {
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .modal {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  #maSection {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 2rem;
+  }
+
+  .bar {
+    width: 100%;
+  }
+
+  .image-container {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .juice-harder-bc {
+    width: 310px;
+    padding: 1rem;
+  }
+
+  .img-harder-bc {
+    height: 180px;
+    width: 180px;
+  }
+
+  #send {
+    width: 100%;
+  }
+
+  input {
+    min-width: 350px;
+  }
+}
+
+/* Styles pour les petits appareils (mobiles) */
+@media (max-width: 768px) {
+  header {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .menu {
+    font-size: 2rem;
+  }
+
+  .i-face {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .juice-sp-title {
+    font-size: 1.2rem;
+  }
+
+  .juice {
+    width: 310px;
+    padding: 1rem;
+  }
+
+  .juice-harder {
+    width: 180px;
+    height: 180px;
+  }
+
+  aside {
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .modal {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  #maSection {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 2rem;
+  }
+
+  .bar {
+    width: 100%;
+  }
+
+  .image-container {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .img-harder-bc {
+    height: 150px;
+    width: 150px;
+  }
+
+  #send {
+    width: 100%;
+  }
+
+  input {
+    width: 300px;
+  }
+}
+
+/* Styles pour les très petits appareils (téléphones en mode portrait) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  .menu {
+    font-size: 1.5rem;
+  }
+
+  .i-face {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .juice-sp-title {
+    font-size: 1rem;
+  }
+
+  .juice {
+    width: 310px;
+    padding: 0.5rem;
+  }
+
+  .juice-harder {
+    width: 180px;
+    height: 180px;
+  }
+
+  aside {
+    margin-top: 2rem;
+    padding: 0.5rem;
+  }
+
+  button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .modal {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+  }
+
+  #maSection {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .bar {
+    width: 100%;
+  }
+
+  .image-container {
+    padding-left: 0;
+  }
+
+  .img-harder-bc {
+    height: 180px;
+    width: 180px;
+  }
+
+  #send {
+    width: 100%;
+  }
+
+  input {
+    width: 300px;
+  }
+}
