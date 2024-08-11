@@ -1,22 +1,7 @@
-import "./style.css";
-import "./style.mobile.css";
-import "./topbar.js";
+import mariageImage from "./assets/images/mariage.jpg";
+import reunionsImage from "./assets/images/reunions.jpg";
+import anniversaireImage from "./assets/images/anniversaire.jpg";
 
-// const promesse = fetch("");
-
-// promesse
-//   .then(async (response) => {
-//     console.log(response);
-//     try {
-//       const users = await response.json();
-//       console.log(users);
-//     } catch (e) {
-//       console.log(e);
-//     }
-//   })
-//   .catch((err) => console.log(err));
-
-// Fonction pour afficher la modal au centre de la page
 function afficherModal() {
   const modal = document.createElement("div");
   modal.classList.add("modal");
@@ -28,19 +13,12 @@ function afficherModal() {
   document.body.appendChild(overlay);
   document.body.appendChild(modal);
 
-  // Utiliser resize-observer pour ajuster la taille de l'image
-
   const imageContainer = document.createElement("div");
   imageContainer.classList.add("image-container");
 
-  // Ajouter le conteneur à la modale
   modal.appendChild(imageContainer);
 
-  const images = [
-    "/assets/images/mariage.jpg",
-    "/assets/images/reunions.jpg",
-    "/assets/images/anniversaire.jpg",
-  ];
+  const images = [mariageImage, reunionsImage, anniversaireImage];
 
   images.forEach((src) => {
     const image = document.createElement("img");
@@ -49,35 +27,26 @@ function afficherModal() {
     imageContainer.appendChild(image);
   });
 
-  // Fermeture de la modal au clic
   modal.addEventListener("click", () => {
     modal.remove();
     overlay.remove();
   });
+
   const closeButton = document.createElement("span");
   closeButton.classList.add("close");
-
-  closeButton.textContent = "×"; // Ou utilisez un caractère Unicode pour une croix plus esthétique
-
-  // Événement de fermeture
+  closeButton.textContent = "×";
   closeButton.addEventListener("click", () => {
     modal.remove();
     overlay.remove();
   });
 
-  // Ajout de la croix à la modale
   modal.appendChild(closeButton);
-
-  // ... (le reste du code pour ajouter le contenu de la modale, etc.)
 }
-
-// Fonction pour créer une template (simulée à partir d'un exemple Wix)
 
 function creerTemplate() {
   const nouvelleTemplate = document.createElement("div");
-  nouvelleTemplate.classList.add("ma-template"); // Classe CSS pour styliser la template
+  nouvelleTemplate.classList.add("ma-template");
 
-  // Contenu de la template (à remplacer par votre contenu)
   nouvelleTemplate.innerHTML = `
     <h2>Ma nouvelle template</h2>
     <p>Ce contenu a été créé dynamiquement.</p>
@@ -87,31 +56,21 @@ function creerTemplate() {
   conteneurTemplates.appendChild(nouvelleTemplate);
 }
 
-// Récupérer la section cible
 const sectionCible = document.getElementById("maSection");
-
-// Création des boutons
 const boutonModal = document.createElement("button");
 boutonModal.textContent = "En savoir plus";
 boutonModal.addEventListener("click", afficherModal);
-
-// const boutonTemplate = document.createElement("button");
-// boutonTemplate.textContent = "Créer une template";
-// boutonTemplate.addEventListener("click", creerTemplate);
-
-// Ajouter les boutons à la section cible
 sectionCible.appendChild(boutonModal);
-//sectionCible.appendChild(boutonTemplate);
+
+const boutonTemplate = document.createElement("button");
+boutonTemplate.textContent = "Créer une template";
+boutonTemplate.addEventListener("click", creerTemplate);
+sectionCible.appendChild(boutonTemplate);
 
 const bouton = document.getElementById("monBouton");
 const overlay = document.getElementById("overlay");
 const modal = document.getElementById("modal");
 const closeButton = document.querySelector(".close");
-
-// bouton.addEventListener("click", () => {
-//   modal.classList.remove("hidden");
-//   overlay.classList.remove("hidden");
-// });
 
 closeButton.addEventListener("click", () => {
   modal.classList.add("hidden");
