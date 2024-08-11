@@ -265,6 +265,11 @@ label {
   margin-bottom: 1rem;
 }
 
+footer {
+  background: #333;
+  padding: 2rem;
+}
+
 body.mobile-view {
   /* Styles pour les petits appareils (mobiles) */
   @media (max-width: 768px) {

@@ -1,278 +1,19 @@
-/* Styles pour les petits appareils (mobiles) */
-
-@media (max-width: 844px) {
-  header {
-    padding: 2rem;
-    flex-direction: column;
-  }
-
-  #myForm {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-
-  .menu {
-    font-size: 2rem;
-  }
-
-  .i-face {
-    font-size: 1.5rem;
-  }
-
-  section {
-    padding: 2rem;
-    flex-direction: column;
-  }
-
-  .juice-sp-title {
-    font-size: 1.2rem;
-  }
-
-  .juice {
-    width: 341px;
-    padding: 1rem;
-  }
-
-  .juice-harder {
-    width: 300px;
-    height: 150px;
-  }
-
-  aside {
-    margin-top: 3rem;
-    padding: 1rem;
-  }
-
-  button {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-
-  .modal {
-    width: 90%;
-    height: auto;
-    padding: 20px;
-  }
-
-  #maSection {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    padding: 2rem;
-  }
-
-  .bar {
-    width: 100%;
-  }
-
-  .image-container {
-    flex-direction: column;
-    padding-left: 0;
-  }
-
-  .juice-harder-bc {
-    width: 310px;
-    padding: 1rem;
-  }
-
-  .img-harder-bc {
-    height: 180px;
-    width: 180px;
-  }
-
-  #send {
-    width: 100%;
-  }
-
-  input {
-    min-width: 320px;
-  }
-}
-
-@media (max-width: 896px) {
-  header {
-    padding: 2rem;
-    flex-direction: column;
-  }
-
-  #myForm {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-
-  .menu {
-    font-size: 2rem;
-  }
-
-  .i-face {
-    font-size: 1.5rem;
-  }
-
-  section {
-    padding: 2rem;
-    flex-direction: column;
-  }
-
-  .juice-sp-title {
-    font-size: 1.2rem;
-  }
-
-  .juice {
-    width: 345px;
-    padding: 1rem;
-  }
-
-  .juice-harder {
-    width: 300px;
-    height: 150px;
-  }
-
-  aside {
-    margin-top: 3rem;
-    padding: 1rem;
-  }
-
-  button {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-
-  .modal {
-    width: 90%;
-    height: auto;
-    padding: 20px;
-  }
-
-  #maSection {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    padding: 2rem;
-  }
-
-  .bar {
-    width: 100%;
-  }
-
-  .image-container {
-    flex-direction: column;
-    padding-left: 0;
-  }
-
-  .juice-harder-bc {
-    width: 310px;
-    padding: 1rem;
-  }
-
-  .img-harder-bc {
-    height: 180px;
-    width: 180px;
-  }
-
-  #send {
-    width: 100%;
-  }
-
-  input {
-    min-width: 350px;
-  }
-}
-
-@media (max-width: 932px) {
-  header {
-    padding: 2rem;
-    flex-direction: column;
-  }
-
-  #myForm {
-    grid-column-start: 1;
-    grid-row-start: 1;
-  }
-
-  .menu {
-    font-size: 2rem;
-  }
-
-  .i-face {
-    font-size: 1.5rem;
-  }
-
-  section {
-    padding: 2rem;
-    flex-direction: column;
-  }
-
-  .juice-sp-title {
-    font-size: 1.2rem;
-  }
-
-  .juice {
-    width: 345px;
-    padding: 1rem;
-  }
-
-  .juice-harder {
-    width: 300px;
-    height: 150px;
-  }
-
-  aside {
-    margin-top: 3rem;
-    padding: 1rem;
-  }
-
-  button {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-
-  .modal {
-    width: 90%;
-    height: auto;
-    padding: 20px;
-  }
-
-  #maSection {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    padding: 2rem;
-  }
-
-  .bar {
-    width: 100%;
-  }
-
-  .image-container {
-    flex-direction: column;
-    padding-left: 0;
-  }
-
-  .juice-harder-bc {
-    width: 310px;
-    padding: 1rem;
-  }
-
-  .img-harder-bc {
-    height: 180px;
-    width: 180px;
-  }
-
-  #send {
-    width: 100%;
-  }
-
-  input {
-    min-width: 350px;
-  }
-}
-
-/* Styles pour les petits appareils (mobiles) */
+/* Styles pour les écrans de taille moyenne (tablettes) */
 @media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Taille de police légèrement plus grande pour les tablettes */
+  }
+
   header {
     padding: 2rem;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .menu {
     font-size: 2rem;
+    margin-bottom: 1rem; /* Ajouter un espace en dessous pour une meilleure lisibilité */
   }
 
   .i-face {
@@ -282,16 +23,19 @@
   section {
     padding: 2rem;
     flex-direction: column;
+    gap: 1.5rem; /* Espacement plus grand entre les éléments */
   }
 
   .juice-sp-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    text-align: center;
   }
 
-  .juice {
-    width: 310px;
-    padding: 1rem;
-  }
+  /* .juice {
+    width: 90%; /* Réduire légèrement la largeur pour s'adapter aux tablettes */
+  /* padding: 1rem;
+    margin: auto; /* Centrer l'élément */
+  /* }  */
 
   .juice-harder {
     width: 180px;
@@ -301,21 +45,23 @@
   aside {
     margin-top: 3rem;
     padding: 1rem;
+    text-align: center;
   }
 
   button {
     padding: 0.75rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    margin-top: 1rem;
   }
 
   .modal {
-    width: 90%;
+    width: 80%;
     height: auto;
     padding: 20px;
   }
 
   #maSection {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     padding: 2rem;
   }
@@ -330,8 +76,17 @@
   }
 
   .img-harder-bc {
-    height: 150px;
-    width: 150px;
+    height: 180px;
+    width: 180px;
+  }
+
+  img {
+    height: 180px;
+    width: 180px;
+  }
+
+  #myForm {
+    grid-column-start: 1;
   }
 
   #send {
@@ -339,18 +94,120 @@
   }
 
   input {
-    width: 300px;
+    width: 90%;
   }
 }
 
-/* Styles pour les très petits appareils (téléphones en mode portrait) */
+/* Styles pour les petits écrans (mobiles en mode paysage) */
+@media (max-width: 600px) {
+  body {
+    font-size: 15px; /* Ajustement de la taille de la police pour une meilleure lisibilité */
+  }
+
+  header {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .menu {
+    font-size: 1.8rem;
+  }
+
+  .i-face {
+    font-size: 1.3rem;
+  }
+
+  section {
+    padding: 1.5rem;
+    gap: 1rem; /* Espacement entre les éléments */
+  }
+
+  .juice-sp-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* .juice {
+    width: 100%;
+    padding: 0.75rem;
+  } */
+
+  .juice-harder {
+    width: 180px;
+    height: 180px;
+  }
+
+  aside {
+    margin-top: 2.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  button {
+    padding: 0.65rem;
+    font-size: 0.9rem;
+  }
+
+  .modal {
+    width: 85%;
+    height: auto;
+    padding: 18px;
+  }
+
+  #maSection {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .bar {
+    width: 100%;
+  }
+
+  img {
+    height: 180px;
+    width: 180px;
+  }
+
+  .image-container {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .img-harder-bc {
+    height: 180px;
+    width: 180px;
+  }
+
+  #myForm {
+    grid-column-start: 1;
+  }
+
+  #send {
+    width: 100%;
+  }
+
+  input {
+    width: 90%;
+  }
+}
+
+/* Styles pour les très petits écrans (mobiles en mode portrait) */
 @media (max-width: 480px) {
   body {
     font-size: 14px;
+    line-height: 1.5; /* Amélioration de la lisibilité */
+  }
+
+  img {
+    height: 180px;
+    width: 180px;
   }
 
   header {
     padding: 1rem;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .menu {
@@ -363,16 +220,18 @@
 
   section {
     padding: 1rem;
+    gap: 1rem; /* Espacement entre les éléments */
   }
 
   .juice-sp-title {
     font-size: 1rem;
+    text-align: center;
   }
 
-  .juice {
-    width: 310px;
+  /* .juice {
+    width: 100%;
     padding: 0.5rem;
-  }
+  } */
 
   .juice-harder {
     width: 180px;
@@ -382,11 +241,16 @@
   aside {
     margin-top: 2rem;
     padding: 0.5rem;
+    text-align: center;
   }
 
   button {
     padding: 0.5rem;
     font-size: 0.8rem;
+  }
+
+  #myForm {
+    grid-column-start: 1;
   }
 
   .modal {
@@ -406,6 +270,7 @@
 
   .image-container {
     padding-left: 0;
+    text-align: center;
   }
 
   .img-harder-bc {
@@ -418,6 +283,6 @@
   }
 
   input {
-    width: 300px;
+    width: 90%;
   }
 }
