@@ -72,7 +72,9 @@
 
   .image-container {
     flex-direction: column;
-    padding-left: 0;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2.5rem;
   }
 
   .img-harder-bc {
@@ -169,8 +171,10 @@
   }
 
   .image-container {
-    padding-left: 0;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2.5rem;
   }
 
   .img-harder-bc {
@@ -269,8 +273,10 @@
   }
 
   .image-container {
-    padding-left: 0;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2.5rem;
   }
 
   .img-harder-bc {
