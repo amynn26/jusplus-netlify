@@ -37,9 +37,9 @@ function afficherModal() {
   modal.appendChild(imageContainer);
 
   const images = [
-    "assets/images/mariage.jpg",
-    "assets/images/reunions.jpg",
-    "assets/images/anniversaire.jpg",
+    "/assets/images/mariage.jpg",
+    "/assets/images/reunions.jpg",
+    "/assets/images/anniversaire.jpg",
   ];
 
   images.forEach((src) => {
