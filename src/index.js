@@ -1,7 +1,6 @@
 import mariageImage from "./assets/images/mariage.jpg";
 import reunionsImage from "./assets/images/reunions.jpg";
 import anniversaireImage from "./assets/images/anniversaire.jpg";
-
 import "./style.css";
 import "./style.mobile.css";
 
