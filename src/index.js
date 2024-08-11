@@ -62,10 +62,10 @@ boutonModal.textContent = "En savoir plus";
 boutonModal.addEventListener("click", afficherModal);
 sectionCible.appendChild(boutonModal);
 
-const boutonTemplate = document.createElement("button");
-boutonTemplate.textContent = "Créer une template";
-boutonTemplate.addEventListener("click", creerTemplate);
-sectionCible.appendChild(boutonTemplate);
+// const boutonTemplate = document.createElement("button");
+// boutonTemplate.textContent = "Créer une template";
+// boutonTemplate.addEventListener("click", creerTemplate);
+// sectionCible.appendChild(boutonTemplate);
 
 const bouton = document.getElementById("monBouton");
 const overlay = document.getElementById("overlay");
