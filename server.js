@@ -11,7 +11,7 @@ app.use(express.json());
 // Configurer CORS pour autoriser plusieurs origines
 const allowedOrigins = [
   "http://localhost:5173", // Développement local
-  "https://master--incandescent-lily-5ed535.netlify.app", // Site déployé sur Netlify
+  "https://master--incandescent-lily-5ed535.netlify.app",
 ];
 
 app.use(
