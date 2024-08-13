@@ -7,9 +7,22 @@ dotenv.config(); // Assurez-vous que ceci est au début
 
 const app = express();
 app.use(express.json());
+
+// Configurer CORS pour autoriser plusieurs origines
+const allowedOrigins = [
+  "http://localhost:5173", // Développement local
+  "https://master--incandescent-lily-5ed535.netlify.app", // Site déployé sur Netlify
+];
+
 app.use(
   cors({
-    origin: "http://localhost:5173", // Remplacez par l'origine appropriée
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
