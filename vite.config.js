@@ -2,9 +2,9 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   assetsInclude: ["mariage.jpg", "reunions.jpg", "anniversaire.jpg"],
-  root: "./src", // Indique le répertoire racine de votre projet
+  root: "./src",
   build: {
-    outDir: "../dist", // Répertoire de sortie pour les fichiers générés
+    outDir: "../dist",
     emptyOutDir: true,
     rollupOptions: {
       input: {

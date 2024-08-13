@@ -5,6 +5,7 @@ import "./style.css";
 import "./style.mobile.css";
 
 function afficherModal() {
+  // Fonction pour afficher la modal
   const modal = document.createElement("div");
   modal.classList.add("modal");
   modal.textContent =
@@ -58,11 +59,14 @@ function creerTemplate() {
   conteneurTemplates.appendChild(nouvelleTemplate);
 }
 
-const sectionCible = document.getElementById("maSection");
-const boutonModal = document.createElement("button");
-boutonModal.textContent = "En savoir plus";
-boutonModal.addEventListener("click", afficherModal);
-sectionCible.appendChild(boutonModal);
+// JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+  const sectionCible = document.getElementById("maSection");
+  const boutonModal = document.createElement("button");
+  boutonModal.textContent = "En savoir plus";
+  boutonModal.addEventListener("click", afficherModal);
+  sectionCible.appendChild(boutonModal);
+});
 
 // const boutonTemplate = document.createElement("button");
 // boutonTemplate.textContent = "Créer une template";
@@ -80,13 +84,13 @@ closeButton.addEventListener("click", () => {
 });
 
 document.getElementById("myForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
+  event.preventDefault(); // Empêche la soumission du formulaire de recharger la page
 
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const response = await fetch("https://restapi.fr/api/users", {
+    const response = await fetch("http://localhost:5000/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -105,15 +109,15 @@ document.getElementById("myForm").addEventListener("submit", async (event) => {
   }
 });
 
-document
-  .getElementById("toggleResponsive")
-  .addEventListener("click", function () {
-    document.body.classList.toggle("mobile-view");
-    const isMobile = document.body.classList.contains("mobile-view");
-    this.textContent = isMobile
-      ? "Désactiver Vue Mobile"
-      : "Activer Vue Mobile";
-  });
+// document
+//   .getElementById("toggleResponsive")
+//   .addEventListener("click", function () {
+//     document.body.classList.toggle("mobile-view");
+//     const isMobile = document.body.classList.contains("mobile-view");
+//     this.textContent = isMobile
+//       ? "Désactiver Vue Mobile"
+//       : "Activer Vue Mobile";
+//   });
 
 // const form = document.querySelector("form");
 
