@@ -135,8 +135,9 @@ button:hover {
   padding: 50px;
   border-radius: 10px;
   z-index: 999;
-  width: 80%; /* Ajustez cette valeur pour la largeur souhaitée */
-  height: 80%;
+  width: 80%; /* Largeur relative */
+  max-height: 80vh; /* Limiter la hauteur à 80% de la hauteur de la fenêtre */
+  overflow-y: auto; /* Permettre le défilement vertical */
 }
 
 .close {
